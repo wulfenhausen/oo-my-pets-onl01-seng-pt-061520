@@ -58,7 +58,14 @@ class Owner
   end
   
   def sell_pets
-    Cat.all.each { |cat}
+    Cat.all.each { |cat | 
+      while cat.owner == self
+        cat.mood = "nervous"
+        cat.owner = ""
+      end
+    }
+    
+    
     .mood = "nervous"
     dogs.mood = "nervous"
     cats.owner = ""
