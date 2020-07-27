@@ -37,6 +37,14 @@ class Owner
     @@pets << new_cat
   end
   
+  def dogs
+    @@pets.select {|pets| pets.Class == Dog}
+  end
+  
+  def buy_dog
+    new_dog = Dog.new
+    @@pets << new_dog
+  end
   
 end
   
