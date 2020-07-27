@@ -61,13 +61,13 @@ class Owner
     Cat.all.each { |cat | 
       while cat.owner == self
         cat.mood = "nervous"
-        cat.owner = ""
+        cat.owner = nil
       end
     }
     Dog.all.each { |dog | 
       while dog.owner == self
         dog.mood = "nervous"
-        dog.owner = ""
+        dog.owner = nil
       end
     }
   end
