@@ -48,6 +48,9 @@ class Owner
     dogs.each {|dog| dog.mood = "happy"}
   end
 
+  def feed_cats
+    cats.each {|dog| dog.mood = "happy"}
+  end
   
   def list_pets
     "I have #{dogs.count} dog(s), and #{cats.count} cat(s)."
