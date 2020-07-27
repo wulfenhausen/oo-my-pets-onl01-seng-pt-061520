@@ -43,7 +43,7 @@ class Owner
   
   def buy_dog
     new_dog = Dog.new
-    @@pets << new_dog
+    @@pets.dogs << new_dog
   end
   
 end
