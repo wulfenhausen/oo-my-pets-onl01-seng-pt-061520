@@ -45,7 +45,7 @@ class Owner
   end
   
   def walk_dogs
-    
+    if
   end
 
   
