@@ -64,13 +64,12 @@ class Owner
         cat.owner = ""
       end
     }
-    
-    
-    .mood = "nervous"
-    dogs.mood = "nervous"
-    cats.owner = ""
-    dogs.owner = ""
-    
+    Dog.all.each { |dog | 
+      while dog.owner == self
+        dog.mood = "nervous"
+        dog.owner = ""
+      end
+    }
   end
   
 end
