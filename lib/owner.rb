@@ -29,21 +29,19 @@ class Owner
   end 
   
   def cats
-    @@pets.select {|pets| pets.Class == Cat}
+    Cat.all.select {|pets| pets.Class == Cat}
   end
   
-  def buy_cat
-    new_cat = Cat.new
-    @@pets << new_cat
+  def buy_cat(cat)
+     @@pets[:cats] << Cat.new(cat, self)
   end
   
   def dogs
-    @@pets.select {|pets| pets.Class == Dog}
+    @Dog.all.select {|pets| pets.Class == Dog}
   end
   
-  def buy_dog
-    new_dog = Dog.new
-    @@pets.dogs << new_dog
+  def buy_dog(dog)
+     @@pets[:dogs] << Dog.new(dog, self)
   end
   
 end
